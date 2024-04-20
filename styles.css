@@ -96,7 +96,7 @@
 }
 
 :root {
-    --main-background: #cdd0dd;
+    --main-background: #E5E7EBAA;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -274,9 +274,10 @@ input {
     font-size: 1.3rem;
 }
 
-button {
+#sign-up {
+    height: 4rem;
+    width: 15rem;
     font-family: "robotomedium";
-    padding: .7rem 3rem;
     font-size: 2rem;
     background-color: #2f3031;
     color: white;
@@ -284,7 +285,10 @@ button {
     border: none;
     box-shadow: 4px 4px 8px #727475;
     margin-bottom: 2rem;
+    
 }
+
+
 
 .submit > p {
     font-family: "robotmedium";
@@ -299,14 +303,27 @@ button {
     color: #2f3031;
 }
 
-input:focus:valid {
+input:focus {
     background-color: var(--main-background);
     outline: 2px solid rgb(19, 83, 221);
     box-shadow: 2px 2px 4px #2f3031;
     
 }
 
-input:focus:invalid {
+.invalid {
     outline : 2px solid rgb(160, 9, 9);
     background-color: rgb(243, 177, 177);
+}
+
+.invalid:focus{
+    outline: 2px solid rgb(19, 83, 221);
+    background-color: rgb(243, 177, 177);
+}
+
+#warning {
+    font-family: "robotomedium";
+    font-size: 1rem;
+    color: red;
+    height: 1rem;
+    margin-top: .2rem;
 }
