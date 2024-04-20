@@ -288,19 +288,10 @@ input {
     
 }
 
-
-
 .submit > p {
     font-family: "robotmedium";
     font-size: 2rem;
     color: black;
-}
-
-.submit > p > span {
-    font-family: "robotbold";
-    font-weight: 900;
-    font-size: 2rem;
-    color: #2f3031;
 }
 
 input:focus {
@@ -326,4 +317,12 @@ input:focus {
     color: red;
     height: 1rem;
     margin-top: .2rem;
+}
+
+a {
+    text-decoration: none;
+    font-family: "robotbold";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #2f3031;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Enter Space</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="styles.css"/>
 </head>
@@ -34,15 +34,15 @@
         <div class="form">
             <h2 class="form-title">Enter Here</h2>
             <div class="form-content">
-                <form id="form" action="draw-timer.html">
+                <form id="form" action="countdown.html">
                     <div class="row1">
                         <div class="f1">
                             <label for="first-name">FIRST NAME</label>
-                            <input type="text" id="first-name" name="first-name">
+                            <input type="text" id="first-name" name="first-name" required>
                         </div>
                         <div class="f2">
                             <label for="last-name">LAST NAME</label>
-                            <input type="text" id="last-name" name="last-name">
+                            <input type="text" id="last-name" name="last-name" required>
                         </div>
                     </div>
                     <div class="row2">
@@ -58,13 +58,13 @@
                     <div class="row3">
                         <div class="f5">
                             <label for="password">PASSWORD</label>
-                            <input type="password" id="password" name="password">
+                            <input type="password" id="password" name="password" required>
                             <div id="warning"></div>
                         </div>
                         
                         <div class="f6">
                             <label for="confirm-password">CONFIRM PASSWORD</label>
-                            <input type="password" id="confirm-password" name="confirm-password">
+                            <input type="password" id="confirm-password" name="confirm-password" required>
                         </div>
                         <p></p>
                     </div>
@@ -73,7 +73,7 @@
         </div>
         <div class="submit">
             <input type="submit" form="form" value="Sign Up" id="sign-up">
-            <p>Already entered the draw? <span>See draw timer</span></p>
+            <p>Already entered the draw? <span><a href="countdown.html">See draw timer</a></span></p>
         </div>
     </div>
     <script>
