@@ -96,7 +96,7 @@
 }
 
 :root {
-    --main-background: rgb(240, 242, 243);
+    --main-background: #cdd0dd;
 }
 
 html, body, div, span, applet, object, iframe,
@@ -139,25 +139,40 @@ img {
     object-fit: cover;
     width: 30vw;
     height: 100vh;
-    box-shadow: 3px 0px 5px lightgrey;
 }
 
 .left-side {
     position: relative;
+    display: inline-block;
+    z-index: 10;
     text-align: center;
     width: 30vw;
     height: 100vh;
+    flex: 1;
+}
+
+.side-image {
+    display: block;
+    max-width: 100%;
+    margin: auto;
+    padding: auto;
 }
 
 .img-logo {
     position: absolute;
-    top: 55%;
-    left: 50%;
+    height: 10%;
+    text-align: center;
     width: 100%;
-    transform: translate(-50%, -50%);
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
   }
+
 .logo {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
     color: white;
@@ -185,37 +200,42 @@ a {
 .main {
     width: 70vw;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+}
+.title, .form, .submit {
+    flex: 1;
 }
 
 .title {
     display: flex;
-    flex-direction: column;
-    justify-content: end;
-    padding-left: 5vw;
-    padding-bottom: 3vh;
-    height: 30vh;
+    align-items: end;
+    padding: 0 10vw 2vh 4vw;
     background-color: var(--main-background);
 
 }
 
 .form {
-    position: relative;
-    padding-left: 5vw;
-    height: 33vh;
     box-shadow: 0px 3px 8px rgb(116, 117, 117);
     z-index: 1;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .submit {
-    padding-left: 5vw;
+    padding: 4vh 0 0 4vw;
     background-color: var(--main-background);
-    height: 35vh;
     position: relative;
     z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
 }
 
 .title-text {
-    width: 50vw;
+    /* width: 50vw; */
     margin-top: 5rem;
     margin-bottom: 2rem;
 }
@@ -235,4 +255,76 @@ a {
 h2 {
     font-family: 'robotomedium';
     font-size: 2rem;
+}
+
+.form-title {
+    margin-bottom: 2rem;
+}
+
+.f1, .f2, .f3, .f4, .f5, .f6 {
+    display: flex;
+    flex-direction: column;
+    margin-right: 4rem;
+    width: 20vw;
+}
+
+.row1, .row2, .row3 {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+label {
+    margin-bottom: .4rem;
+    font-family: "robotomedium";
+    font-size: 1rem;
+}
+
+.form {
+    font-size: 1.3rem;
+    line-height: 1.2;
+    width: 70vw;
+    display: flex;
+    padding: 2rem 4vw;
+    
+}
+
+input {
+    border: 2px solid var(--main-background);
+    border-radius: 5px;
+    height: 2.8rem;
+    padding-left: 1rem;
+    font-family: "robotomedium";
+    font-size: 1.3rem;
+}
+
+button {
+    font-family: "robotomedium";
+    padding: .7rem 3rem;
+    font-size: 2rem;
+    background-color: #2f3031;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 4px 4px 8px #727475;
+    margin-bottom: 2rem;
+}
+
+.submit > p {
+    font-family: "robotmedium";
+    font-size: 2rem;
+    color: black;
+}
+
+.submit > p > span {
+    font-family: "robotbold";
+    font-weight: 900;
+    font-size: 2rem;
+    color: #2f3031;
+}
+
+input:focus {
+    background-color: var(--main-background);
+    outline: 2px solid rgb(19, 83, 221);
+    box-shadow: 2px 2px 4px #2f3031;
+    
 }
