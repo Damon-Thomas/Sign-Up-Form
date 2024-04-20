@@ -18,8 +18,8 @@
             </div>
         </div>
         <div class="img-footer">
-            <p>
-                Photo by <a href="https://unsplash.com/@alex_andrews?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Alexander Andrews</a> on <a href="https://unsplash.com/photos/moon-H0dcpcO_hYc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+            <p class="foot">
+                Photo by <a class="foot" href="https://unsplash.com/@alex_andrews?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Alexander Andrews</a> on <a class="foot" href="https://unsplash.com/photos/moon-H0dcpcO_hYc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
             </p>
         </div>
     </div>
@@ -27,14 +27,14 @@
         <div class="title">
             <div class="title-text">
                 <h2>It's Finally Time. Take the ultimate journey to the moon today.</h2>
-                <h2>Sign up <span class="italic">now</span> to enter the draw.</h2>
+                <h2>Enter the draw today.</h2>
                 <h2 class="tag-line"><strong class="bold">Space</strong> is waiting...</h2>
             </div>
         </div>
         <div class="form">
             <h2 class="form-title">Enter Here</h2>
             <div class="form-content">
-                <form id="form" action="countdown.html">
+                <form id="form" action="countdown.html" onsubmit="return validate()">
                     <div class="row1">
                         <div class="f1">
                             <label for="first-name">FIRST NAME</label>
@@ -83,12 +83,11 @@
 
         password1.addEventListener("input", event => passValidation());
         password2.addEventListener("input", event => passValidation());
-        
         function passValidation() {
             if (password1.value === password2.value) {
-                password1.classList.remove("invalid")
-                password2.classList.remove("invalid")
-                warning.textContent = ""
+                password1.classList.remove("invalid");
+                password2.classList.remove("invalid");
+                warning.textContent = ""    
             } 
             else {
                 password1.classList.add("invalid");
@@ -96,7 +95,10 @@
                 warning.textContent = "Passwords do not match";
             }
         }
-        
+
+        function validate() {
+            return (password1.value === password2.value)
+        }
     </script>
     
     

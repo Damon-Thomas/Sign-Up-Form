@@ -58,3 +58,18 @@ time, mark, audio, video {
 h1 {
     margin: 10px;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+p {
+    position: absolute;
+    text-shadow: 2px 2px 2px black;
+}
+a, p {
+    text-decoration: none;
+    color: white;
+}
