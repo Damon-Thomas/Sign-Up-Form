@@ -322,9 +322,14 @@ button {
     color: #2f3031;
 }
 
-input:focus {
+input:focus:valid {
     background-color: var(--main-background);
     outline: 2px solid rgb(19, 83, 221);
     box-shadow: 2px 2px 4px #2f3031;
     
+}
+
+input:focus:invalid {
+    outline : 2px solid rgb(160, 9, 9);
+    background-color: rgb(243, 177, 177);
 }
